@@ -4,8 +4,11 @@ import { Roboto } from "next/font/google";
 // @components
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { Providers } from "@/components/providers";
 
 const roboto = Roboto({ weight: ["500"], subsets: ["latin"] });
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Casecobra",
@@ -23,7 +26,7 @@ export default function RootLayout({ children }: Readonly<Props>) {
           <Navbar />
         </header>
         <main className="min-h-[calc(100vh-3.5rem-1px)] flex flex-col grainy-light">
-          {children}
+          <Providers>{children}</Providers>
         </main>
         <Footer />
       </body>

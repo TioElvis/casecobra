@@ -12,8 +12,6 @@ const LIST = [
   "Supporto per i modelli moderni di iPhone",
 ];
 
-export const dynamic = "force-dynamic";
-
 export default function Home() {
   return (
     <div>
