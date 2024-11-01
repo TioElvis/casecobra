@@ -8,9 +8,17 @@ datasource db {
 }
 
 model User {
-  id    String @id @default(cuid())
+  id    String @id
   email String
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+model Configuration {
+  id              String  @id @default(cuid())
+  width           Int
+  height          Int
+  imgSrc          String
+  croppedImageUrl String?
 }
